@@ -28,6 +28,10 @@ Open a terminal and type:
 <br>`docker run -dit --name figletcreatorservice --link postgres --net figlet-network -p 9005:9005 14karra/figletcreatorservice`
 <br>
 Figlet Creator Service is running on port `9005`.
+<br>
+- You can create a Figlet by sending a POST request at `http://localhost:9005/api/v1` with a message as body.
+<br>
+- You can get all saved Figlets by sending a GET request at `http://localhost:9005/api/v1`. As expected, the JSON list is not suitable for direct printing.  
 
 ## Using `docker-compose up -d`
 Alternatively, you could make use of the `docker-compose.yml` file provided within the project folder.
