@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5433
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: FIGLET_DB
+
+  pgAdmin:
+    image: dpage/pgAdmin
+    container_name: pgAdmin
+    ports:
+      - 80:5431
+    environment:
+      PGADMIN_DEFAULT_EMAIL: johndoe@mail.com
+      PGADMIN_DEFAULT_PASSWORD: pgadmin4
+    links:
+      - "postgres:postgres"
+
+  figletcreatorservice:
+    image: 14karra/figletcreatorservice
+    container_name: figletcreatorservice
+    ports:
+      - 9005:9005
+    links:
+      - "postgres:postgres"
