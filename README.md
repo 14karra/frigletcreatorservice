@@ -32,7 +32,7 @@ Figlet Creator Service is running on port `9005`.
 - You can create a Figlet by sending a POST request at `http://localhost:9005/api/v1` with a message as body.
 - You can get all saved Figlets by sending a GET request at `http://localhost:9005/api/v1`. As expected, the JSON list is not suitable for direct printing.  
 
-![Execution example](https://github.com/14karra/figletcreatorservice/blob/master/Screenshot_1.jpg?raw=true)
+![Execution example](https://github.com/14karra/frigletcreatorservice/blob/master/Screenshot_1.jpg?raw=true)
 
 ## Using `docker-compose up -d`
 Alternatively, you could make use of the `docker-compose.yml` file provided within the project folder.
