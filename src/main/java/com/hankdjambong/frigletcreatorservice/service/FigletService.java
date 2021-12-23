@@ -27,6 +27,6 @@ public class FigletService {
     }
 
     public List<Figlet> getAllFiglets() {
-        //return figletRepository.findAll();
+        return figletRepository.findAll();
     }
 }
